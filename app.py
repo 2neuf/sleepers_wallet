@@ -373,9 +373,9 @@ if st.button("Analyser le trade", use_container_width=True):
 
     st.metric("Écart de valeur", gap)
 
-    # ---------------------------------------------------
+    #---------------------------------------------------
     # Compensation pool
-    # ---------------------------------------------------
+    #---------------------------------------------------
 
     compensation_pool = []
 
@@ -385,9 +385,9 @@ if st.button("Analyser le trade", use_container_width=True):
     for pick_name, pick_value in PICK_VALUES.items():
         compensation_pool.append((pick_name, pick_value))
 
-    # ---------------------------------------------------
+    #---------------------------------------------------
     # Generate options
-    # ---------------------------------------------------
+    #---------------------------------------------------
 
     options = []
 
@@ -435,9 +435,9 @@ if st.button("Analyser le trade", use_container_width=True):
             else:
                 st.error("🔴 Surpayé")
 
-    # ---------------------------------------------------
+    #---------------------------------------------------
     # If you overpay
-    # ---------------------------------------------------
+    #---------------------------------------------------
 
     overpay_gap = base_value - target_value
 
@@ -490,9 +490,9 @@ if st.button("Analyser le trade", use_container_width=True):
 
                 st.write(f"**Écart final :** {opt['diff']}")
 
-    # ---------------------------------------------------
+    #---------------------------------------------------
     # Impact portfolio
-    # ---------------------------------------------------
+    #---------------------------------------------------
 
     st.subheader("📊 Impact portefeuille")
 
