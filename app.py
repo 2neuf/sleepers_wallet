@@ -1,4 +1,4 @@
-app.py - Sleepers Wallet V4
+
 
 import requests
 import pandas as pd
