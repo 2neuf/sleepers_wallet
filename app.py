@@ -135,7 +135,13 @@ exposure = (
 exposure["exposition_pct"] = (exposure["ligues"] / num_active * 100).round(1)
 exposure = exposure.sort_values(["ligues", "player_name"], ascending=[False, True])
 
-CORE_THRESHOLD = 20
+CORE_THRESHOLD = st.sidebar.slider(
+    "Seuil du core (%)",
+    min_value=5,
+    max_value=60,
+    value=20,
+    step=5
+)
 
 core = exposure[exposure["exposition_pct"] >= CORE_THRESHOLD].copy()
 core_players = set(core["player_name"])
