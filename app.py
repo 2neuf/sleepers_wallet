@@ -135,7 +135,9 @@ exposure = (
 exposure["exposition_pct"] = (exposure["ligues"] / num_active * 100).round(1)
 exposure = exposure.sort_values(["ligues", "player_name"], ascending=[False, True])
 
-core = exposure[exposure["exposition_pct"] >= 50].copy()
+CORE_THRESHOLD = 20
+
+core = exposure[exposure["exposition_pct"] >= CORE_THRESHOLD].copy()
 core_players = set(core["player_name"])
 
 page = st.sidebar.radio("Navigation", ["📊 Portfolio", "📋 Rosters", "🤝 Trader"])
