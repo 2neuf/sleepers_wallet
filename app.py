@@ -144,7 +144,7 @@ page = st.sidebar.radio("Navigation", ["📊 Portfolio", "📋 Rosters", "🤝 T
 
 st.sidebar.metric("Ligues analysées", num_active)
 st.sidebar.metric("Joueurs uniques", portfolio_df["player_name"].nunique())
-st.sidebar.metric("Core ≥50%", len(core))
+st.sidebar.metric(f"Core ≥{CORE_THRESHOLD}%", len(core))
 
 if page == "📊 Portfolio":
     st.title("🏈 Sleepers Wallet")
